@@ -1,5 +1,5 @@
 html{
-    max-height: auto;
+    height: auto;
     min-width: 600px;
     background-image: linear-gradient(130deg, #302e2efd, #ece6e6b2);
     background-repeat: no-repeat;
@@ -8,7 +8,7 @@ html{
 
 .container{
     width: 500px;
-    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
