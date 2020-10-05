@@ -43,3 +43,16 @@ input[type = "text"]{
     font-family: 'Crimson Text', serif;
     color: #559955;
 }
+
+button:hover{
+    color: lightcoral;
+}
+
+.todolist{
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 10px 25px;
+    height: 100%;
+    overflow-y: auto;
+}
