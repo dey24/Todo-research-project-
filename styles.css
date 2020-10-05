@@ -1,0 +1,45 @@
+html{
+    height: 100vh;
+    min-width: 600px;
+    background-image: linear-gradient(130deg, #302e2efd, #ece6e6b2);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.container{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    font-family: 'Bangers',cursive;
+}
+
+.logo{
+    display:flex;
+    margin: auto;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 1.5rem 0;
+    align-items: center;
+}
+
+.main{
+    padding: 20px;
+}
+
+form{
+    background-color: #ffffff;
+    padding: 15px;
+    border: 15px;
+    display: flex;
+}
+
+input[type = "text"]{
+    height: 30px;
+    outline: 0;
+    border: none;
+    font-size: 1 rem;
+    font-family: 'Crimson Text', serif;
+    color: #559955;
+}
