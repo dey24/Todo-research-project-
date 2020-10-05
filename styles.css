@@ -7,7 +7,8 @@ html{
 }
 
 .container{
-    width: 600px;
+    width: 500px;
+    height: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -19,9 +20,16 @@ html{
     display:flex;
     margin: auto;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 100%;
+    height: auto;
     padding: 1.5rem 0;
     align-items: center;
+    border-radius: 100px;
+
+}
+.headline{
+    text-align: center;
+    text-shadow: 2px 2px #ff0000;
 }
 
 .main{
