@@ -15,7 +15,7 @@ function handleSubmitForm(e){
 
 function addTodo(todo){
     let ul = document.querySelector('ul');
-    let li = document.querySelector('li');
+    let li = document.createElement('li');
 
     li.innerHTML = `
         <span class = "todo-item">${todo}</span>
