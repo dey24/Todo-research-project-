@@ -1,3 +1,16 @@
+//var firebaseConfig = {
+ //   apiKey: "AIzaSyCr0UpQOsc7nI1myNuU6zizjHF7gg_Vf3k",
+ //   authDomain: "todoist-59e43.firebaseapp.com",
+ //   databaseURL: "https://todoist-59e43.firebaseio.com",
+ //   projectId: "todoist-59e43",
+ //   storageBucket: "todoist-59e43.appspot.com",
+ //   messagingSenderId: "743158732366",
+ //   appId: "1:743158732366:web:885771f1636ed5f2b3551f"
+ // };
+  // Initialize Firebase
+ // firebase.initializeApp(firebaseConfig);
+
+
 //selector
 document.querySelector('form').addEventListener('submit', handleSubmitForm);
 document.querySelector('ul').addEventListener('click', handleClickDeleteOrCheck);

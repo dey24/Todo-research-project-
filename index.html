@@ -9,61 +9,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Crimson+Text:ital,wght@1,700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
 </head>
-<body onload="loadbody()">
-    <!--date and time section-->
-    <div class="container"></div>
-        <h3>Welcome, <span class="user">User</span></h3>
-        <div class="date-time">
-            <span id="date">date</span>
-            <span id="month">month</span>
-            <span id="year">year</span>
-            <span id="weekday">weekday</span>
-        </div><br>
-        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-plus"></i> SIGN UP
-        </button><br>
-        <a class="btn btn-secondary btn-sm" href="login.html">
-            <i class="fas fa-sign-in-alt"></i> LOGIN
-        </a>
-    </div><br>
-    <!-- todo-form -->
-    <div class="container">
-        <form autocomplete="off" class="form-group" id="form">
-            <input type="text" class="form-control" id="todos" disabled><br>
-            <button type="submit" class="btn btn-success btn-block" disabled>ADD</button>
-        </form><br>
-        <div class="error">You don't have access to this application, plz register your account or login</div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Register</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form autocomplete="off" class="form-group" id="signup-form">
-                        <label for="">Name</label>
-                        <input type="text" class="form-control" id="name" required><br>
-                        <label for="">Email</label>
-                        <input type="email" class="form-control" id="email" required><br>
-                        <label for="">Password</label>
-                        <input type="password" class="form-control" id="password" required minlength="6"><br>
-                        <button type="submit" class="btn btn-primary">REGISTER</button>
-                    </form>
-                </div>
-                <div class="container error" id="signupError"></div>
-                <div class="container error" id="signupError2"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Login</div>
+            <div class="title signup">Sign Up</div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <div class="slider-tab">
             </div>
         </div>
+        <div class="form-inner">
+            <form action="#" class="login">
+                <div class="field">
+                    <input type="text" placeholder="Email" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="field">
+                    <input type="submit" value="Login">
+                </div>
+                <div class="signup-link">Not a member? <a href="#">SignUp now</a></div>
+            </form>
+            <form action="#" class="signup">
+                <div class="field">
+                    <input type="text" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Confirm password" required>
+                </div>
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Signup">
+                </div>
+            </form>
+        </div>
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -79,29 +69,32 @@
     </script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
 
-<script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+
+    <script>
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyD_a00mP6AS2DjQ07rN7j8eGeAlngTXtI0",
-    authDomain: "game-guide-8e001.firebaseapp.com",
-    databaseURL: "https://game-guide-8e001.firebaseio.com",
-    projectId: "game-guide-8e001",
-    storageBucket: "game-guide-8e001.appspot.com",
-    messagingSenderId: "408324929686",
-    appId: "1:408324929686:web:c5145a8e8251eedc646ab7",
-    measurementId: "G-SD36V4265K"
-  };
+    var firebaseConfig = {
+        apiKey: "AIzaSyD_a00mP6AS2DjQ07rN7j8eGeAlngTXtI0",
+        authDomain: "game-guide-8e001.firebaseapp.com",
+        databaseURL: "https://game-guide-8e001.firebaseio.com",
+        projectId: "game-guide-8e001",
+        storageBucket: "game-guide-8e001.appspot.com",
+        messagingSenderId: "408324929686",
+        appId: "1:408324929686:web:c5145a8e8251eedc646ab7",
+        measurementId: "G-SD36V4265K"
+    };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+    </script>
     <script src="index.js"></script>
 </body>
 </html>
