@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Crimson+Text:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+
+</head>
+<body class="container">
+    <div>
+        <h1></h1>
+    </div>
+    <header class="logo1">
+        <img src="background.png" class="logo" alt="">
+            <h1 class="headline">Structure your DAY!</h1>
+    </header>
+
+    <div class="main">
+        <form class="form">
+            <input type="text" placeholder="New Task..." class="text">
+            <button type="submit"><i class="fas fa-plus-square"></i></button>
+        </form>
+        <div class="todolist">
+            <ul>
+                
+            </ul>
+            <a class="clearAll" id="clearAll">Clear All</a>
+        </div>
+
+    </div>
+    
+<div class="footer">
+    <div class="footer-bottom">
+        &copy; Made with ❤️ by Research 46 team
+    </div>
+</div>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyD_a00mP6AS2DjQ07rN7j8eGeAlngTXtI0",
+    authDomain: "game-guide-8e001.firebaseapp.com",
+    databaseURL: "https://game-guide-8e001.firebaseio.com",
+    projectId: "game-guide-8e001",
+    storageBucket: "game-guide-8e001.appspot.com",
+    messagingSenderId: "408324929686",
+    appId: "1:408324929686:web:e2dcf871e70442a8646ab7",
+    measurementId: "G-1YCGL9FP3E"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+</script>
+
+    <script src="app.js"></script>
+</body>
+</html>
