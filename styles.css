@@ -54,9 +54,16 @@ input[type = "text"]{
     color: #559955;
     flex-grow: 1;
 }
+.text{
+    background-color:  #bdbaba4d;
+    transition: all 0.3s ease-out;
+}
+.text:hover{
+    background-color: #FFFFFF;
+}
 button {
     font-size: 1.5rem;
-    background-color: #FFFFFF;
+    background-color: #bdbaba4d;
     outline: 0;
     border: none;
     color: #595959;
@@ -116,4 +123,7 @@ i{
 .todo-list-item-fall{
     transform: translateY(12rem) rotateZ(10deg);
     opacity: 0;
+}
+.footer{
+    text-align: center;
 }
